@@ -25,7 +25,6 @@ function authReducer(state = initialState, action) {
       };
 
     case REGISTER_SUCCESS:
-      localStorage.setItem('token', payload.token);
       return {
         ...state,
         ...payload,
@@ -35,7 +34,6 @@ function authReducer(state = initialState, action) {
 
     case REGISTER_FAIL:
     case AUTH_ERROR:
-      localStorage.removeItem('token');
       return {
         ...state,
         token: null,
