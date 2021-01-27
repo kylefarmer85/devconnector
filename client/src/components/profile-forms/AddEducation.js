@@ -7,7 +7,7 @@ import { addEducation } from '../../actions/profile';
 const AddEducation = ({ addEducation, history }) => {
   const [formData, setFormData] = useState({
     school: '',
-    degreee: '',
+    degree: '',
     fieldofstudy: '',
     from: '',
     to: '',
