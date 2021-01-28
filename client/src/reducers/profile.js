@@ -1,4 +1,3 @@
-import { STATES } from 'mongoose';
 import {
   GET_PROFILE,
   GET_PROFILES,
@@ -37,7 +36,8 @@ function profileReducer(state = initialState, action) {
       return {
         ...state,
         error: payload,
-        loading: false
+        loading: false,
+        profile: null
       };
     case CLEAR_PROFILE:
       return {
@@ -48,7 +48,7 @@ function profileReducer(state = initialState, action) {
       };
     case GET_REPOS:
       return {
-        ...STATES,
+        ...state,
         repos: payload,
         loading: false
       };
